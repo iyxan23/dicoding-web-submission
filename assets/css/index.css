@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: #202C59;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Lato';
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* /scrollbar */
+
+header > #keraton-bg {
+    height: 90vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/keraton.png);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#keraton-bg > h1 {
+    margin-bottom: 0;
+
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+
+    color: white;
+
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+#keraton-bg > p {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+
+    color: white;
+
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+header > nav {
+    background-color: #F0A202;
+
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+
+    position: absolute;
+    height: 10px;
+
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    transition: all 500ms ease-in-out;
+
+    width: 100%;
+    z-index: 10;
+}
+
+header > nav > ul {
+    padding: 0;
+    margin: 0;
+    transform: translate(0, -3rem);
+
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    justify-content: center;
+
+    transition: all 500ms ease-in-out;
+}
+
+header > nav > ul > li {
+    height: 100%;
+    padding: 0;
+
+    transition: all 500ms ease-in-out;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+header > nav.sticky {
+    position: fixed;
+    top: 0;
+    height: auto;
+}
+
+header > nav.sticky > ul {
+    transform: translate(0, 0);
+}
+
+header > nav.sticky > ul > li {
+    padding: 1.5rem 1rem;
+}
+
+header > nav.sticky > ul > li:hover {
+    background-color: #c98601;
+}
+
+hr {
+    margin: 3.5rem 2rem;
+    opacity: 0.2;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+article {
+    min-width: 0;
+}
+
+aside {
+    top: 0;
+    position: sticky;
+    padding: 5rem;
+    padding-top: calc(5rem + 1.5rem + 1ch);
+
+    height: calc(90vh + 10px);
+    color: white;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #202C59;
+}
+
+aside > img {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: 100%;
+}
+
+aside > #details > h3 {
+    font-weight: 600;
+    font-size: 15pt;
+    text-align: center;
+
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+aside > #details > p#mail {
+    margin-top: 0;
+    text-align: center;
+}
+
+aside > #details > p#mail > a {
+    opacity: 0.8;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    color: white;
+    text-decoration: none;
+}
+
+aside > #details > p#web-dev {
+    opacity: 0.5;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+
+    color: white;
+}
+
+section {
+    padding-left: 5rem;
+    padding-right: 2.5rem;
+
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+/* padding for ancre link */
+section > h2::before {
+    display: block; 
+    content: " "; 
+    margin-top: -6.5rem; 
+    height: 6.5rem; 
+    visibility: hidden; 
+    pointer-events: none;  
+}
+
+section > a {
+    color: white;
+}
+
+section#what-is-surakarta > #surakarta-images {
+    display: flex;
+    flex-direction: row;
+    height: 15rem;
+    overflow-x: scroll;
+    gap: 1rem;
+
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+
+    scroll-snap-align: start;
+    scroll-snap-type: x mandatory;
+}
+
+section#what-is-surakarta > #surakarta-images > figure {
+    min-width: 30rem;
+    max-width: 30rem;
+
+    margin: 0;
+    position: relative;
+}
+
+section#what-is-surakarta > #surakarta-images > figure > figcaption {
+    opacity: 0;
+
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+
+    padding-bottom: 1rem;
+
+    color: white;
+    position: absolute;
+
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75) 100%);
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: opacity 500ms;
+}
+
+section#what-is-surakarta > #surakarta-images > figure > img {
+    border-radius: 1rem;
+    min-width: 30rem;
+    width: 30rem;
+    height: 100%;
+    object-fit: cover;
+
+    flex-grow: 1;
+
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+section#places-to-visit #place-pictures {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+}
+
+section#places-to-visit #place-pictures > figure {
+    background: white;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section#places-to-visit #place-pictures > figure > figcaption {
+    color: black;
+    text-align: center;
+    padding: 1rem;
+}
+
+section#places-to-visit #place-pictures > figure > img {
+    width: 100%;
+    object-fit: cover;
+
+    flex-grow: 1;
+
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;    
+}
+
+section > h2 {
+    font-weight: 700;
+    font-size: 20pt;
+
+    color: #FFFFFF;
+}
+
+section > p {
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 16pt;
+    
+    color: #ffffffc0;
+
+    margin-right: 1rem;
+}
+
+section > img {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;    
+
+    width: 20rem;
+    margin: 2.25rem;
+}
+
+section > img.right {
+    float: right;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+section > img.left {
+    float: left;
+    margin-left: 0;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    background-color: #1A2347;
+}
+
+@media (max-width: 1280px) {
+    section#places-to-visit #place-pictures {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    section#places-to-visit #place-pictures {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        padding: 2.5rem;
+        padding-top: 6.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    article > h2::before {
+        margin-top: -4rem; 
+        height: 4rem; 
+    }
+    
+    header > nav > ul {
+        gap: 1.5rem;
+        transform: translate(0, -10rem);
+        flex-direction: column;
+    }
+
+    header > nav.sticky > ul {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    header > nav.sticky > ul > li {
+        padding: 1rem 0.5rem;
+    }
+
+    header > #keraton-bg {
+        height: calc(100vh - 10px);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/keraton.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    main {
+        flex-direction: column-reverse;
+    }
+
+    aside {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 10rem;
+
+        padding: 2.5rem;
+    }
+
+    aside > img {
+        width: auto;
+        height: 100%;
+    }
+
+    aside > #details {
+        align-self: center;
+        width: 100%;
+    }
+
+    section > img {
+        margin: 0;
+        width: 100%;
+    }
+
+    section > img.right,
+    section > img.left {
+        float: none;
+    }
+
+    section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    section#what-is-surakarta > #surakarta-images {
+        height: 20rem;
+    }
+
+    section#what-is-surakarta > #surakarta-images > figure {
+        min-width: calc(100vw - 3rem);
+        max-width: none;
+    }
+    
+    section#what-is-surakarta > #surakarta-images > figure > img {
+        min-width: auto;
+        width: 100%;
+    }
+}
